@@ -15,9 +15,9 @@ void draw() {
   background(white);
   //println(mouseX, mouseY);
   if ( mouseX >= buttonX && mouseY >= buttonY && mouseX <= buttonX+buttonWidth && mouseY <= buttonY+ButtonHeight ) {
-    buttonColour = yellow;
-  } else {
     buttonColour = purple;
+  } else {
+    buttonColour = yellow;
   }//End IF Button Colour
   fill(buttonColour);
   rect(buttonX, buttonY, buttonWidth, ButtonHeight);
