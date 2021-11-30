@@ -1,5 +1,5 @@
 String buttonText1 = "Click Me";
-String butonText2 = "Or Me!";
+String buttonText2 = "Or Me!";
 PFont buttonFont;
 color purple=#2C08FF, white=#FFFFFF; //Not nice for Night Mode
 //
@@ -12,16 +12,33 @@ void textSetup()
   //Tools / Create Font / Find Font / Do Not Press "OK", known bug
 }//End setup()
 // 
-void textDraw1() 
+void textDrawPre()
 {
   //Laying out text space and tyopgraphical Features
   fill(purple); //Ink, hexidecimal copied from Color Selector
   textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-  textFont(buttonFont, 50); //Change the number until it fits, largest font size
+  textFont(buttonFont, 29); //Change the number until it fits, largest font size
   //textFont() has option to combine font declaration with textSize()
+}//End textDrawPre()
+//
+void textDraw1() 
+{
+  textDrawPre();
   text(buttonText1, buttonX1, buttonY1, buttonWidth1, buttonHeight1);
   fill(white); //reset
   //Space for more rectangles below, with reset values
 }//End textDraw1()
 //
+void textDraw2()
+{
+  //Laying out text space and tyopgraphical Features
+  fill(purple); //Ink, hexidecimal copied from Color Selector
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
+  textFont(buttonFont, 35); //Change the number until it fits, largest font size
+  //textFont() has option to combine font declaration with textSize()
+  text(buttonText2, buttonX2, buttonY2, buttonWidth2, buttonHeight2);
+  fill(white); //reset
+  //Space for more rectangles below, with reset values
+}//End textDraw2()
